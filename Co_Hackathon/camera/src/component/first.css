@@ -1,0 +1,129 @@
+.mid  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15%;
+    margin-top: -10%;
+    width: 30%;
+    height: 35%;
+    mix-blend-mode: undefined;
+    border-radius: 113px;
+    -webkit-backdrop-filter: blur(45px);
+    backdrop-filter: blur(45px);
+    background-color: #ffffff;
+    opacity: 0.7;
+    text-align: center;
+    text-align-last: center;
+  }
+
+.no-fire {
+    width: 135.3px;
+    height: 135.3px;
+    object-fit: contain;
+    mix-blend-mode: undefined;
+}
+
+.NBF {
+    width: 212px;
+    height: 120px;
+    mix-blend-mode: undefined;
+    font-family: NanumSquareEB;
+    font-size: 108px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(240, 147, 41, 0.72);
+}
+
+.text {
+    width: 424px;
+    height: 47px;
+    mix-blend-mode: undefined;
+    font-family: NanumSquareEB;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: rgba(240, 147, 41, 0.72);
+    margin: 0;
+    float: left;
+}
+
+.text .text-style-1 {
+   color: rgba(239, 179, 111, 0.72);
+}
+
+#mid-in {
+    position: relative;
+    top: 50%;
+    height: 200px;
+    margin-top: -100px;
+}
+
+.mid-in-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+#bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/background.jpg');
+    animation-duration: 3s;
+    animation-name: slidein;
+    opacity: 0;
+    bottom: 100vh;
+    background-size: 100%;
+  }
+  
+@keyframes slidein {
+    0% {
+    display: block;
+    opacity: 1;
+    bottom: 0px;
+    }
+    60%{
+    display: block;
+    opacity: 1;
+    bottom: 0px;
+    }
+    100% {
+    bottom: 300px;
+    opacity: 0;
+    }
+}
+
+  /* // 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
+  @media (max-width: 575px) { 
+  #bg {
+      display: none;
+  }
+}
+
+/* // 가로모드 모바일 디바이스 (가로 해상도가 576px보다 크고 768px 보다 작은 화면에 적용) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #bg {
+        display: none;
+    }
+}
+
+/* // 태블릿 디바이스 (가로 해상도가 768px보다 크고 991px 보다 작은 화면에 적용) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #bg {
+        display: none;
+    }
+}
+
+/* // 데스크탑 (가로 해상도가 992px보다 크고 1199px 보다 작은 화면에 적용) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #bg {
+        display: none;
+    }
+}
