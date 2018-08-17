@@ -3,15 +3,15 @@ import set from '../img/settings.png';
 import set_ from '../img/support.png';
 import './template.css';
 
-const Template = ({onClick_hu, setting_, nav, first,close, main, bar, setting, onClick_close, onChange,gray, easy, normal, hard}) => {
+const Template = ({onClick_hu, setting_, nav, first,close, main, bar, setting, onClick_close, onChange_easy, onChange_normal, onChange_hard, gray, easy, normal, hard}) => {
     return (
         <div id="Main">
             <div className={gray}></div>
             <div className={setting}>
                 <img className="giar" src={set} alt="톱니"/>
-                <p className="set">안전:<input value={easy} className="input" onChange={onChange}></input>°C</p>
-                <p className="set">위험:<input value={normal} className="input" onChange={onChange}></input>°C</p>
-                <p className="set">화재:<input value={hard} className="input" onChange={onChange}></input>°C</p>
+                <p className="set">안전:<input className="input" onChange={onChange_easy}></input>°C</p>
+                <p className="set">위험:<input className="input" onChange={onChange_normal}></input>°C</p>
+                <p className="set">화재:<input className="input" onChange={onChange_hard}></input>°C</p>
                 <div className={close} onClick={onClick_close}>
                     <span className="save-text">저장/</span>
                     <span className="close-text">닫기</span>
