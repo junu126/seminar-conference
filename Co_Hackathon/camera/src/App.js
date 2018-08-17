@@ -51,6 +51,22 @@ class App extends Component {
     })
   }
 
+  onChange_easy = (event) => {
+    this.setState({
+      easy : event.target.value
+    })
+  }
+  onChange_normal = (event) => {
+    this.setState({
+      normal : event.target.value
+    })
+  }
+  onChange_hard = (event) => {
+    this.setState({
+      hard : event.target.value
+    })
+  }
+
   onChange = () => {
     this.getdata();
     this.getvidio();
